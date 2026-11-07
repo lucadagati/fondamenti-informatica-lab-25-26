@@ -448,6 +448,32 @@ python3 run.py
 
 Applicazione disponibile su `http://127.0.0.1:5001`
 
+### Configurazione (variabili d'ambiente)
+
+| Variabile | Default | Significato |
+|-----------|---------|-------------|
+| `SECRET_KEY` | casuale a ogni avvio | chiave di sessione Flask; impostala per avere sessioni stabili |
+| `DATABASE_URL` | `sqlite:///.../Progetto_Biomed/health_monitor.db` | URI SQLAlchemy del database |
+| `HOST` | `127.0.0.1` | interfaccia di ascolto (`0.0.0.0` per aprire la demo ai PC dell'aula) |
+| `PORT` | `5001` | porta |
+| `FLASK_DEBUG` | spento | `1` attiva il debugger Werkzeug (mai su rete aperta) |
+
+Il file `health_monitor.db` **non e' versionato**: si genera con `python3 init_db.py` (18 pazienti, circa 58 sessioni, oltre 13.000 misurazioni; verificato). Attenzione: `init_db.py` esegue `drop_all()` e ricrea tutte le tabelle.
+
+### Test e verifica
+
+```bash
+python3 -m unittest discover -s tests    # dalla cartella Progetto_Biomed; atteso: Ran 5 tests ... OK
+```
+
+Verificato: i test passano e dopo `init_db.py` le pagine `/`, `/patients`, `/patients/1`, `/patients/1/timeline`, `/simulate` rispondono 200.
+
+### Problemi comuni
+
+- `ModuleNotFoundError: flask`: l'ambiente virtuale non e' attivo o manca `pip install -r requirements.txt`.
+- `Import MIT-BIH ... saltato`: manca la rete verso PhysioNet; il database resta sintetico, e' normale.
+- `ImportError` lanciando i test: esegui il comando dalla cartella `Progetto_Biomed`, non da `tests/`.
+
 ## Uso dell'applicazione
 
 ### Dashboard

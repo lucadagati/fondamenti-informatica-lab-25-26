@@ -5,3 +5,7 @@ __pycache__/
 *.pyd
 .env
 .DS_Store
+
+# Database SQLite generato da init_db.py / run.py
+*.db
+*.sqlite3

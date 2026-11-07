@@ -123,6 +123,38 @@ Lab_Biomed/
 
 Apri la cartella del laboratorio assegnato e segui il **README** al suo interno (installazione dei tool e svolgimento).
 
+## Progetto_Biomed (progetto d'esame/dimostrativo)
+
+Applicazione Flask + SQLite per il telemonitoraggio di parametri vitali (dati simulati, dataset PhysioNet opzionali, alert, trend ML). Guida completa, configurazione e test in [Progetto_Biomed/README.md](Progetto_Biomed/README.md). Avvio rapido:
+
+```bash
+cd Progetto_Biomed
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python3 init_db.py          # crea health_monitor.db (non versionato)
+python3 run.py              # http://127.0.0.1:5001
+python3 -m unittest discover -s tests
+```
+
+## Requisiti generali
+
+| Lab | Strumenti |
+|-----|-----------|
+| 1 | Linux/macOS con `bash`, `openssl` |
+| 2, 4, Progetto_Biomed | Python 3.10+ (provato con 3.10), `venv`, Jupyter |
+| 3, 5, 6, 7, 9 | MATLAB (Database Toolbox per il Lab 7; Bioinformatics Toolbox per il Lab 5) |
+| 7 | `sqlite3` da riga di comando |
+| 8 | draw.io (file `.drawio`/`.svg`) |
+
+Gli script `.sh` e `.py` sono stati controllati sintatticamente (`bash -n`, `py_compile`); il codice MATLAB (`.m`) **non e' stato verificato in questo ambiente** (MATLAB non disponibile).
+
+## Come usare i laboratori da studente
+
+1. Leggi la teoria breve nel README del laboratorio.
+2. Svolgi gli esercizi in `esercizi/` senza guardare `soluzioni/`.
+3. Confronta con la soluzione e rileggi gli hint.
+4. File generati durante le esercitazioni (chiavi, `.enc`, `.db`) sono ignorati da git.
+
 ---
 
 *Materiale didattico – Fondamenti di Informatica per Ingegneria Biomedica – Università degli Studi di Messina – A.A. 2025/26 – Docente: Luca D'Agati*
