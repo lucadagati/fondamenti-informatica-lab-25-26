@@ -15,7 +15,7 @@ Questo repository raccoglie i **laboratori** del corso. Ogni laboratorio è in u
 
 ```mermaid
 flowchart TD
-    ROOT[Lab_Biomed]
+    ROOT[fondamenti-informatica-lab-25-26]
     ROOT --> README[README.md - presentazione]
     ROOT --> LAB1[01-crittografia-chiavi]
     ROOT --> LAB2[02-vscode-agentic-coding]
@@ -56,7 +56,7 @@ flowchart TD
 ```
 
 ```
-Lab_Biomed/
+fondamenti-informatica-lab-25-26/
 ├── README.md                         ← Sei qui: presentazione
 ├── 01-crittografia-chiavi/           ← Lab 1: chiavi, AES, RSA, firma, crittoanalisi
 │   ├── README.md

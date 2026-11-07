@@ -1,7 +1,7 @@
 # Lab 2 - VS Code, prompting e coding in modalità agentica (fino a Jupyter)
 
 **Fondamenti di Informatica per Ingegneria Biomedica** - UniMe - A.A. 2025/26 - **Luca D'Agati**  
-**Repository del corso:** [lucadagati/Lab_Fondamenti_di_Informatica_25_26](https://github.com/lucadagati/Lab_Fondamenti_di_Informatica_25_26)
+**Repository del corso:** [lucadagati/fondamenti-informatica-lab-25-26](https://github.com/lucadagati/fondamenti-informatica-lab-25-26)
 
 ---
 
